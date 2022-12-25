@@ -28,6 +28,49 @@
   color: #61dafb;
 }
 
+.my-task {
+  padding-left: 50px;
+  width: 250 px;
+  height: 50px;
+  border: solid;
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: table;
+  width: 800px;
+  padding: 10px;
+}
+
+.col1 {
+  float: left;
+  width: 50px;
+}
+
+.box1 {
+  border: 1px solid;
+  width: 40px;
+  border-radius: 25px;
+  display: inline-block;
+  text-align: center
+}
+
+.col2 {
+  float: left;
+  width: 500px;
+}
+
+.box2 {
+  border: 1px solid;
+  width: 600px;
+  border-radius: 25px;
+  display: inline-block;
+  text-align: center;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
