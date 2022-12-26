@@ -1,20 +1,22 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import { taskList } from './taskList';
+import { taskList } from "./taskList";
 
-function TaskShow() : JSX.Element {
-  return <> {
+function TaskShow() {
+  return (
     <div>
-      { taskList.map( task => <div><span > { task.name } </span> </div>)}
+      {taskList.map((task) => (
+        <div>
+          <span> {task.name} </span>
+        </div>
+      ))}
     </div>
-} /</>
+  );
 }
 
 function App() {
-  return (
-    <TaskShow />
-  );
+  return <TaskShow />;
 }
 
 export default App;
