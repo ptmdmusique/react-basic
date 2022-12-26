@@ -1,29 +1,19 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
 
-import { sampleList } from './sampleList';
+import { taskList } from './taskList';
 
-function ListDisplay() {
-  let items: JSX.Element[] = [];
-  for (let i = 0; i < sampleList.length; i++) {
-    let displayName = sampleList[i].name;
-    let item =
-      <div key={i}>
-        <span>
-          {displayName}
-        </span>
-      </div>
-
-    items.push(item);
-  }
-  
-  return <div>{items}</div>
+function TaskShow() : JSX.Element {
+  return <> {
+    <div>
+      { taskList.map( task => <div><span > { task.name } </span> </div>)}
+    </div>
+} /</>
 }
 
 function App() {
   return (
-    <ListDisplay />
+    <TaskShow />
   );
 }
 
