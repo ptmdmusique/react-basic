@@ -1,39 +1,26 @@
-import React from 'react';
-//import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-import { sampleList } from './sampleList';
-  
+import { taskList } from "./taskList";
 
-function ListDisplay() {
-  let items: JSX.Element[] = [];
-  for (let i = 0; i < sampleList.length; i++) {
-    let displayName = sampleList[i].name;
-    let item =
-    <div key={i} >
-      <div className='row'>
-          <div className = 'col1'>
-            <div className='box1'>
-              { sampleList[i].id } 
-            </div>
+function TaskShow() {
+  return (
+    <div>
+      {taskList.map((task) => (
+        <div className="row">
+          <div className="col1">
+            <div className="box1">{task.id}</div>
           </div>
-          <div className = 'col2'>
-            <div className='box2'>
-              { displayName} 
-            </div>
+          <div className="col2">
+            <div className="box2">{task.name}</div>
           </div>
         </div>
-    </div>  
-    items.push(item);
-  }
-  
-  return <div>{items}</div>
+      ))}
+    </div>
+  );
 }
 
 function App() {
-  return (
-    <ListDisplay />
-  );
+  return <TaskShow />;
 }
 
 export default App;

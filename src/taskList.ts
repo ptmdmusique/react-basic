@@ -1,4 +1,4 @@
-export const sampleList = [
+export const taskList = [
   { id: 1, name: "Fix Enterprise bug" },
   { id: 2, name: "Meet with regulators to get business requirement" },
   { id: 3, name: "Meet with internal teams to discuss deadlines" },
