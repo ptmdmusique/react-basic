@@ -6,13 +6,9 @@ function TaskShow() {
   return (
     <div>
       {taskList.map((task) => (
-        <div className="row">
-          <div className="col1">
-            <div className="box1">{task.id}</div>
-          </div>
-          <div className="col2">
-            <div className="box2">{task.name}</div>
-          </div>
+        <div className="container">
+            <div className="id-container">{task.id}</div>
+            <div className="task-name-container">{task.name}</div>
         </div>
       ))}
     </div>
