@@ -29,35 +29,29 @@
 }
 
 .title {
-  margin: 24px 707px 24px 24px;
-  width: 800px;
-  height: 48px;
+  padding: 24px 24px 24px 24px;
 }
 
 .container {
   display: flex;
-  width: 704px;
-  height: 60px;
-  line-height: 40px;
-  padding: 10px;
+  height: 30px;
+  margin-bottom: 16px;
+  text-align: center;
+  padding: 0px 0px 0px 24px;
 }
 
 
 .id-container {
+  width:30px; 
   border: 1px solid;
-  width:30px;
-  margin-bottom: 16px;
-  border-radius: 10px;
-  text-align: center;
-  }
+  border-radius: 30px;
+}
 
 .task-name-container {
-  border: 1px solid;
   width: 600px;
   margin-left: 10px;
-  margin-bottom: 16px;
-  border-radius: 10px;
-  text-align: center;
+  border: 1px solid;
+  border-radius: 30px;
 }
 
 
