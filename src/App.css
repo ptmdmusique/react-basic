@@ -28,23 +28,35 @@
   color: #61dafb;
 }
 
+.title {
+  margin: 24px 707px 24px 24px;
+  width: 800px;
+  height: 48px;
+}
+
 .container {
   display: flex;
-  width: 800px;
+  width: 704px;
+  height: 60px;
+  line-height: 40px;
   padding: 10px;
 }
 
+
 .id-container {
   border: 1px solid;
-  width: 48px;
+  width:30px;
+  margin-bottom: 16px;
   border-radius: 10px;
-  text-align: center
-}
+  text-align: center;
+  }
 
 .task-name-container {
   border: 1px solid;
   width: 600px;
-  border-radius: 25px;
+  margin-left: 10px;
+  margin-bottom: 16px;
+  border-radius: 10px;
   text-align: center;
 }
 
