@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  vertical-align: middle;
+  padding: 24px 24px 24px 24px;
 }
 
 .App-logo {
@@ -28,33 +30,32 @@
   color: #61dafb;
 }
 
-.title {
-  padding: 24px 24px 24px 24px;
-}
-
 .container {
   display: flex;
-  height: 30px;
+  height: 48px;
   margin-bottom: 16px;
   text-align: center;
-  padding: 0px 0px 0px 24px;
 }
 
 
 .id-container {
-  width:30px; 
+  width:  48px;
+  height: 48px; 
   border: 1px solid;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .task-name-container {
-  width: 600px;
+  width: 640px;
+  height: 48px;
   margin-left: 10px;
   border: 1px solid;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
-
+.text{
+  vertical-align: middle;
+}
 
 @keyframes App-logo-spin {
   from {
