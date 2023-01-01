@@ -4,7 +4,7 @@ import { taskList } from "./taskList";
 
 function TaskShow() {
   return (
-    <div>
+    <div className="App">
       <h2>My Fancy TODO App</h2>
       {taskList.map((task) => (
         <div className="container">
