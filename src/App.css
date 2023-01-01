@@ -38,6 +38,7 @@
 .id-container, .task-name-container { 
   align-items: center;
   justify-content: center;
+  display: flex;
 }
 
 
@@ -57,7 +58,7 @@
 }
 
 .text{
-  vertical-align: middle;
+   vertical-align: middle;
 }
 
 @keyframes App-logo-spin {
