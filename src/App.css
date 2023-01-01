@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  padding: 24px 24px 24px 24px;
 }
 
 .App-logo {
@@ -26,6 +26,39 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.container {
+  display: flex;
+  height: 48px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.id-container, .task-name-container { 
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+.id-container {
+  width:  48px;
+  height: 48px; 
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.task-name-container {
+  width: 640px;
+  height: 48px;
+  margin-left: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.text{
+   vertical-align: middle;
 }
 
 @keyframes App-logo-spin {
