@@ -58,39 +58,35 @@ function TaskShow() {
                   setTasks(tasks.filter( item => item.del !== '*'))
                 }}  
               >
-               <font size="+2">🗑</font>
-
-
-
+               <font size="+3" color='red'>🗑</font>
+   
               </button>
             </div>  
         </div>
       ))}
 
-       
+      <div className="new-task-container"> 
         <form onSubmit={handleSubmit} >
-          <div className="container" >
-          
-           <div className="newtask-name">
-            <input 
-              style={{width: "640px"}}
-              type='text'
-              placeholder="New task name here"
-              onChange={ event => setNewTask(event.target.value)}
-              value={newTask}
-            />
-          </div>
           <div>
-            <button type='submit' className="newtask-button">
-              Add new
-            </button>
-          </div>  
-         </div>       
+            <label>Task name
+              <div className="newtask-name">
+                <input 
+                    style={{width: "640px"}}
+                    type='text'
+                    placeholder="New task name here"
+                    onChange={ event => setNewTask(event.target.value)}
+                    value={newTask}
+                />
+                <button type='submit' className="newtask-button">
+                    Add new
+                </button>
+              </div>  
+            </label>     
+          </div> 
         </form>
-       
+      </div>  
     </div>
-  )  
-
+  )
 }
 
 function App() {

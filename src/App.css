@@ -50,7 +50,7 @@
 }
 
 .task-name-container {
-  width: 640px;
+  width: 620px;
   height: 48px;
   margin-left: 10px;
   border: 1px solid;
@@ -63,22 +63,34 @@
 
 .delete-button {
   margin-left: 10px;
-  width:  28px;
-  height: 38px; 
+  width:  48px;
+  height: 48px; 
   display: flex;
   border-radius: 10px;
 }
 
+.new-task-container{
+  margin-top: 50px;
+  display: flex;
+  width: 770px;
+  height: 67px;
+  text-align: left;
+}
+
+
 .newtask-name {
+  width: 730px;
   height: 48px;
   text-align: left;
+  border-radius: 10px;
   display: flex;
 }
 
 .newtask-button {
   margin-left: 10px;
+  padding: 15px 0px 0px 25px;
   display: flex;
-  width:  48px;
+  width:  107.97px;
   height: 48px; 
   border: 1px solid;
   border-radius: 10px;
