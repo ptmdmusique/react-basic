@@ -61,6 +61,32 @@
    vertical-align: middle;
 }
 
+.delete-button {
+  margin-left: 10px;
+  width:  28px;
+  height: 38px; 
+  display: flex;
+  border-radius: 10px;
+}
+
+.newtask-name {
+  height: 48px;
+  text-align: left;
+  display: flex;
+}
+
+.newtask-button {
+  margin-left: 10px;
+  display: flex;
+  width:  48px;
+  height: 48px; 
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: rgb(241, 106, 241);
+  font-size: 6;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
