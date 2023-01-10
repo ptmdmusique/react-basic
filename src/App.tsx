@@ -2,36 +2,42 @@ import "./App.css";
 import React, { useState } from 'react';
 import { taskList } from "./taskList";
 
-let taskListCopy = taskList;
+import icon from './icons8-delete.svg';
+
 
 // Create a list with additional field to mark deleted task
-  let taskListExt: any[] = [];
-  for (let i=0 ; i < taskListCopy.length; i++){
+interface typeExtended {
+  id: number;
+  name: string;
+  isDeleted: boolean;
+}
+
+let taskListExt: typeExtended[] = [] ;
+
+taskList.map( task => (
     taskListExt.push(
       {
-        'id'  : taskListCopy[i].id,
-        'name': taskListCopy[i].name,
-        'del' : '' 
+        'id'       : task.id,
+        'name'     : task.name,
+        'isDeleted'  : false 
       }
-    )
-  }
-
-
+    ))
+)
 //
-
 function TaskShow() {
-  let [tasks, setTasks ] = useState(taskListExt);
-  let [newTask, setNewTask] = useState('');
+  const [tasks, setTasks ] = useState(taskListExt);
+  const [newTaskName, setNewTaskName] = useState('');
   
   const handleSubmit:React.FormEventHandler<HTMLFormElement> = (event) => {
     
     event.preventDefault();
-    let newId  = tasks[ tasks.length-1 ].id + 1;
+    const newId  = tasks[ tasks.length-1 ].id + 1;
     
       setTasks( (previousTask) => [
                   ...previousTask,
                   { id: newId,
-                    name: newTask
+                    name: newTaskName,
+                    isDeleted: false,
                   }
               ]
             )
@@ -51,15 +57,16 @@ function TaskShow() {
               <span className="text">{task.name}</span>
             </div>
 
-            <div className="delete-button">
-              <button type='button'
+            <div>
+              <button 
+                className="delete-button"
+                type='button'
                 onClick={ () => {
-                  task.del = '*'
-                  setTasks(tasks.filter( item => item.del !== '*'))
+                  task.isDeleted = true
+                  setTasks(tasks.filter( item => ! item.isDeleted))
                 }}  
               >
-               <font size="+3" color='red'>🗑</font>
-   
+                <img className='delete-button-icon' src={icon} width='30px' height='30px' />
               </button>
             </div>  
         </div>
@@ -68,21 +75,19 @@ function TaskShow() {
       <div className="new-task-container"> 
         <form onSubmit={handleSubmit} >
           <div>
-            <label>Task name
-              <div className="newtask-name">
-                <input 
-                    style={{width: "640px"}}
-                    type='text'
-                    placeholder="New task name here"
-                    onChange={ event => setNewTask(event.target.value)}
-                    value={newTask}
+            <label for='taskname'>Task name</label><br />
+               <input 
+                  name='taskname'
+                  className='new-task-name'
+                  type='text'
+                  placeholder="New task name here"
+                  onChange={ event => setNewTaskName(event.target.value)}
+                  value={newTaskName}
                 />
-                <button type='submit' className="newtask-button">
-                    Add new
+                <button type='submit' className="new-task-button">
+                    <font color='white'>Add new</font>
                 </button>
-              </div>  
-            </label>     
-          </div> 
+          </div>
         </form>
       </div>  
     </div>

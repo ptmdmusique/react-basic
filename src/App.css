@@ -50,7 +50,7 @@
 }
 
 .task-name-container {
-  width: 620px;
+  width: 640px;
   height: 48px;
   margin-left: 10px;
   border: 1px solid;
@@ -62,40 +62,46 @@
 }
 
 .delete-button {
-  margin-left: 10px;
+  margin-left: 16px;
   width:  48px;
   height: 48px; 
   display: flex;
+  border-color: crimson;
   border-radius: 10px;
 }
 
+.delete-button-icon{
+  padding-top: 5px ;
+  width: 30px;
+  height: 30px;
+
+}
 .new-task-container{
   margin-top: 50px;
   display: flex;
   width: 770px;
   height: 67px;
-  text-align: left;
 }
 
 
-.newtask-name {
-  width: 730px;
-  height: 48px;
+.new-task-name {
+  width: 638px;
+  height: 54px;
   text-align: left;
+  border: 1px solid;
   border-radius: 10px;
-  display: flex;
 }
 
-.newtask-button {
+.new-task-button {
   margin-left: 10px;
-  padding: 15px 0px 0px 25px;
-  display: flex;
-  width:  107.97px;
+  align-items: center;
+  justify-content: center;
+  width:  114px;
   height: 48px; 
   border: 1px solid;
   border-radius: 10px;
-  background-color: rgb(241, 106, 241);
-  font-size: 6;
+  background-color: #6200EE;
+  font-size: 16px;
 }
 
 
