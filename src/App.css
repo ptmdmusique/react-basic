@@ -66,27 +66,30 @@
   width:  48px;
   height: 48px; 
   display: flex;
-  border-color: crimson;
+  align-items: center;
+  justify-content: center;
+  border-color: #FF0707;
+  background-color: unset;
   border-radius: 10px;
 }
 
 .delete-button-icon{
-  padding-top: 5px ;
   width: 30px;
   height: 30px;
-
 }
 .new-task-container{
   margin-top: 50px;
   display: flex;
+  align-items: flex-end;
   width: 770px;
   height: 67px;
 }
 
 
 .new-task-name {
+  padding: 0 0 0 20px;
   width: 638px;
-  height: 54px;
+  height: 48px;
   text-align: left;
   border: 1px solid;
   border-radius: 10px;
@@ -101,7 +104,13 @@
   border: 1px solid;
   border-radius: 10px;
   background-color: #6200EE;
+  color: white;
   font-size: 16px;
+}
+
+.my-input {
+  display: flex;
+  flex-direction: column;
 }
 
 
