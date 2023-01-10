@@ -4,17 +4,10 @@ import { taskList } from "./taskList";
 
 import icon from "./icons8-delete.svg";
 
-// Create a list with additional field to mark deleted task
-interface TypeExtended {
-  id: number;
-  name: string;
-  isDeleted: boolean;
-}
-
-let taskListExt: TypeExtended[] = [];
 
 //
 function TaskShow() {
+// Create a list with additional field to mark deleted task
   const [tasks, setTasks] = useState(
     taskList.map((task) => ({
       id: task.id,
