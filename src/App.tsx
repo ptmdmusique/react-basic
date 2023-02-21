@@ -2,41 +2,41 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import icon from "./icons8-delete.svg";
 
-function TaskShow() {
+interface Item {
+  id: number;
+  name: string;
+}
+interface ItemWithDeleteFlag {
+  id: number;
+  name: string;
+  isDeleted: boolean;
+}
 
-  interface Item {
-    id: number;
-    name: string;
-  }
-  interface ExItem {
-    id: number;
-    name: string;
-    isDeleted: boolean;
-  }
-  const [newTaskName, setNewTaskName] = useState("");  
+function TaskShow() {
+  const [newTaskName, setNewTaskName] = useState("");
   //    Fetch data
-    const [tasks, setTasks] = useState<ExItem[]>([]);
-    
-    useEffect(() => {
-      fetch("https://www.jsonkeeper.com/b/MF8H")
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(response.statusText);
-          }
-          return response;
-        })
-        .then((response) => response.json())
-        .then((data: Item[]) => {
-          setTasks(
-            data.map((item) => ({
-              id: item.id,
-              name: item.name,
-              isDeleted: false,
-            }))
-          );
-          console.log("Task ...", tasks);
-        });
-    }, []);
+  const [tasks, setTasks] = useState<ItemWithDeleteFlag[]>([]);
+
+  useEffect(() => {
+    fetch("https://www.jsonkeeper.com/b/MF8H")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then((data: Item[]) => {
+        setTasks(
+          data.map((item) => ({
+            id: item.id,
+            name: item.name,
+            isDeleted: false,
+          }))
+        );
+      });
+
+    return setTasks([]);  // cleanup
+  }, []);
 
   // end fetch data
 
