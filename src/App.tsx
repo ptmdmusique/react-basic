@@ -35,7 +35,9 @@ function TaskShow() {
         );
       });
 
-    return setTasks([]);  // cleanup
+    return () => {
+      setTasks([]);  // cleanup
+    }
   }, []);
 
   // end fetch data
