@@ -1,0 +1,90 @@
+
+$pad: padding 24px 24px 24px 24px;
+@mixin border-style($b: solid, $p: 1px, $r: 10px) {
+    border: $b $p;
+    border-radius: $r;
+}
+@mixin text-align($align, $justify, $disp) {
+    align-items: $align;
+    justify-content: $justify;
+    display: $disp;
+}
+
+@mixin text-border() {
+    @include text-align(center, center, flex);
+    @include border-style;
+}
+.App {
+    padding: $pad;
+    .container {
+        display: flex;
+        height: 48px;
+        margin-bottom: 16px;
+        text-align: center;
+        .text {
+               vertical-align: middle;
+            }
+        .id-container {
+            @include text-border;
+            width:  48px;
+            height: 48px; 
+            justify-content: center;
+        }    
+        .task-name-container {
+            @include text-border;
+            width: 640px;
+            height: 48px;
+            margin-left: 10px;
+            justify-content: center;
+        }
+        .delete-button {
+                margin-left: 16px;
+                width:  48px;
+                height: 48px; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-color: #FF0707;
+                background-color: unset;
+                border-radius: 10px;
+                .delete-button-icon {
+                    width: 30px;
+                    height: 30px;
+                }
+        }
+    }
+
+
+    .new-task-container{
+        margin-top: 50px;
+        display: flex;
+        align-items: flex-end;
+        width: 770px;
+        height: 67px;
+        .my-input {
+            display: flex;
+            flex-direction: column;
+            .new-task-name {
+                padding: 0 0 0 20px;
+                width: 638px;
+                height: 48px;
+                text-align: left;
+                @include border-style($r: 5px);
+            }
+        }
+        .new-task-button {
+            margin-left: 10px;
+            align-items: center;
+            justify-content: center;
+            width:  114px;
+            height: 48px; 
+            // border-style
+            border: 1px solid;
+            border-radius: 10px;
+            //
+            background-color: #6200EE;
+            color: white;
+            font-size: 16px;
+        }
+    }
+}
