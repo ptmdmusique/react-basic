@@ -4,6 +4,16 @@ $pad: padding 24px 24px 24px 24px;
     border: $b $p;
     border-radius: $r;
 }
+@mixin text-align($align, $justify, $disp) {
+    align-items: $align;
+    justify-content: $justify;
+    display: $disp;
+}
+
+@mixin text-border() {
+    @include text-align(center, center, flex);
+    @include border-style;
+}
 .App {
     padding: $pad;
     .container {
@@ -11,22 +21,21 @@ $pad: padding 24px 24px 24px 24px;
         height: 48px;
         margin-bottom: 16px;
         text-align: center;
+        .text {
+               vertical-align: middle;
+            }
         .id-container {
+            @include text-border;
             width:  48px;
             height: 48px; 
-            @include border-style;
-            .text {
-                vertical-align: middle;
-            }
+            justify-content: center;
         }    
         .task-name-container {
+            @include text-border;
             width: 640px;
             height: 48px;
             margin-left: 10px;
-            @include border-style;
-            .text {
-                vertical-align: middle;
-            }
+            justify-content: center;
         }
         .delete-button {
                 margin-left: 16px;
